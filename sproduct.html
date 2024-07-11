@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Coppatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>shop design</title>
+    <style>
+        .all,
+        .all::before,
+        .all::after {
+            margin-right: 48px;
+            padding: 17px;
+            box-sizing: border-box;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .swiper {
+            position: relative;
+            width: 400px; height: 490px;
+        }
+        
+        .swiper-slide {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            border: 1px solid 
+            rgba(255, 255, 255, 0.3);
+            user-select: none;
+            border-radius: 20px;
+        }
+        
+        .cost {
+            position: absolute;
+            top: 8px;
+            right: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            padding: 6px 10px;
+            color: #fff;
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 600;
+        }
+        
+        .dark-text {
+            color: #202134;
+        }
+        .swiper-slide img {
+            width: 100%; height: 100%;
+            border-radius: 20px;
+        }
+        
+        .overlay {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0; bottom: 0;
+            width: 100%; height: 150px;
+            padding: 10px 20px;
+            background: rgba(93, 95, 145, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid 
+            rgba(255, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .overlay h1 {
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            font-weight: 600;
+        }
+        
+        .overlay p {
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 300;
+            line-height: 1.3;
+            color: black;
+        }
+        
+        .ratings {
+            display: flex;
+            column-gap: 10px;
+            margin-top: -6px;
+        }
+        .ratings span {
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 300;
+        }
+        .star {
+            color: #afe312;
+        }
+        @media (max-width: 1050px) {
+            .swiper {
+                width: 350px;
+                height: 450px;
+            }
+        }
+        
+        
+        @media (max-width: 930px) {
+            section {
+                grid-template-columns: 100%;
+                grid-template-rows: 55% 40%;
+                grid-template-areas:
+                    "slider"
+                    "content";
+                place-items: center;
+                gap: 64px;
+                padding: 60px;
+            }
+        
+            .swiper {
+                grid-area: slider;
+            }
+        
+            .content {
+                grid-area: content;
+                text-align: center;
+            }
+        
+            .content h1 {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 470px) {
+            section {
+                padding: 40px 40px 60px;
+            }
+        
+            .swiper {
+                width: 300px;
+                height: 400px;
+            }
+        }
+    </style>
+</head> 
+
+<body>
+    
+     <!-- Header -->
+    
+     <section id="header">
+        <a href="index.html"><img src="img/logo (2).png" class="logo" alt=""></a>
+
+        <div>
+            <ul class="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="conatact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag' ></i></a></li>
+                <li><a href="persian-index.html"> Fa <i class='bx bxs-down-arrow'></i></a></li>
+                <a href="#" id="close"><i class='bx bxs-shield-x'></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class='bx bx-shopping-bag' ></i></a>
+            <i id="bar" class='bx bx-menu'></i>
+        </div>
+     </section>
+
+    <!--prodetails-->
+
+     <section id="prodetails" class="section-p1">
+        <div  class="all">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="img/product/mo5.jpg" />
+                        <div class="cost">from $230 per group</div>
+                        <div class="overlay">
+                            <h1>Lemonade Medium Size</h1>
+                            <p>
+                                Discover the fascinating beauty of this historic city by
+                                strolling through the rich cultural tapestry that makes Florence
+                                a timeless destination.
+                            </p>
+                            <div class="ratings">
+                                <div class="stars">
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star-half-outline"></ion-icon>
+                                </div>
+                                <span>138 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="img/product/mo3.jpg" />
+                        <div class="cost">from $380 per group</div>
+                        <div class="overlay">
+                            <h1>Lomade Large  Size</h1>
+                            <p>
+                                Explore the city's majestic castles and fascinating history by
+                                joining our guided tour for an unforgettable journey through
+                                Scotland's capital.
+                            </p>
+                            <div class="ratings">
+                                <div class="stars">
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                </div>
+                                <span>307 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="img/product/mo4.jpg" />
+                        <div class="cost dark-text">from $99 per adult</div>
+                        <div class="overlay">
+                            <h1>Lemonade Two Medium Size</h1>
+                            <p>
+                                Experience the energy and excitement of New York City from Times
+                                Square's dazzling lights to the serene beauty of Central Park.
+                            </p>
+                            <div class="ratings">
+                                <div class="stars">
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star-half-outline"></ion-icon>
+                                </div>
+                                <span>1152 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="img/product/mo6.jpg" />
+                        <div class="cost dark-text">from $117 per adult</div>
+                        <div class="overlay">
+                            <h1>Lemonade Small Size</h1>
+                            <p>
+                                Embark on a magical journey through Tokyo by discovering the
+                                beauty of the city as cherry blossom trees paint the streets in
+                                hues of pink.
+                            </p>
+                            <div class="ratings">
+                                <div class="stars">
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star"></ion-icon>
+                                    <ion-icon class="star" name="star-outline"></ion-icon>
+                                </div>
+                                <span>619 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div id="single-pro-details" class="single-pro-details">
+            <h6>Home / Lemonade</h6>
+            <h4>Lemonade Moris 800 gr</h4>
+            <h2 id="price">$139.00</h2>
+            <div class="select" id="option">
+                <p id="tx">Item size <i class='bx bxs-down-arrow'></i></p>
+                <div id="items" class="items">
+                    <li id="item-2">Small</li>
+                    <li id="item-3">Medium</li>
+                    <li id="item-4">Large</li>
+                </div>
+            </div>
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <h4>product Details</h4>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa.</span>
+        </div>
+     </section>
+
+     <!--product 1-->
+
+     <section id="product1" class="section-p1">
+        <h2>Featured products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/product/o1.jpg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class='bx bx-cart-alt cart' ></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='sproduct1.html'">
+                <img src="img/product/o2.jpg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>                        
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class='bx bx-cart-alt cart' ></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='sproduct2.html'">
+                <img src="img/product/es1.jpg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class='bx bx-cart-alt cart' ></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='sproduct3.html'">
+                <img src="img/product/es2.jpg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class='bx bx-cart-alt cart' ></i></a>
+            </div>
+        </div>
+     </section>
+
+     <!--new letter-->
+
+     <section id="newletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <button class="normal">Sign Up</button>
+        </div>
+     </section>
+
+     <!--footer-->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo (1).png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Fransisco
+            </p>
+            <p><strong>Phone: </strong>+01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-linkedin'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2023 by Sobhan.v.f | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var smallimg = document.getElementsByClassName("small-img");
+
+            smallimg[0].onclick = function(){
+                MainImg.src = smallimg[0].src;
+            }
+            smallimg[1].onclick = function(){
+                MainImg.src = smallimg[1].src;
+            }
+            smallimg[2].onclick = function(){
+                MainImg.src = smallimg[2].src;
+            }
+            smallimg[3].onclick = function(){
+                MainImg.src = smallimg[3].src;
+            }
+
+            
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script src="js/script.js"></script>
+</body>
+</html>
