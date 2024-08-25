@@ -5,146 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Coppatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <title>shop design</title>
-    <style>
-        .all,
-        .all::before,
-        .all::after {
-            margin-right: 48px;
-            padding: 17px;
-            box-sizing: border-box;
-            font-family: "Nunito", sans-serif;
-        }
-
-        .swiper {
-            position: relative;
-            width: 400px; height: 490px;
-        }
-        
-        .swiper-slide {
-            position: relative;
-            background-position: center;
-            background-size: cover;
-            border: 1px solid 
-            rgba(255, 255, 255, 0.3);
-            user-select: none;
-            border-radius: 20px;
-        }
-        
-        .cost {
-            position: absolute;
-            top: 8px;
-            right: 6px;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-            border-radius: 30px;
-            padding: 6px 10px;
-            color: #fff;
-            font-size: clamp(0.8rem, 4vw, 0.9rem);
-            font-weight: 600;
-        }
-        
-        .dark-text {
-            color: #202134;
-        }
-        .swiper-slide img {
-            width: 100%; height: 100%;
-            border-radius: 20px;
-        }
-        
-        .overlay {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            left: 0; bottom: 0;
-            width: 100%; height: 150px;
-            padding: 10px 20px;
-            background: rgba(93, 95, 145, 0.2);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-top: 1px solid 
-            rgba(255, 255, 255, 0.3);
-            color: #fff;
-            border-radius: 0 0 20px 20px;
-        }
-        
-        .overlay h1 {
-            font-size: clamp(1.2rem, 4vw, 1.5rem);
-            font-weight: 600;
-        }
-        
-        .overlay p {
-            font-size: clamp(0.8rem, 4vw, 0.9rem);
-            font-weight: 300;
-            line-height: 1.3;
-            color: black;
-        }
-        
-        .ratings {
-            display: flex;
-            column-gap: 10px;
-            margin-top: -6px;
-        }
-        .ratings span {
-            font-size: clamp(0.8rem, 4vw, 0.9rem);
-            font-weight: 300;
-        }
-        .star {
-            color: #afe312;
-        }
-        @media (max-width: 1050px) {
-            .swiper {
-                width: 350px;
-                height: 450px;
-            }
-        }
-        
-        
-        @media (max-width: 930px) {
-            section {
-                grid-template-columns: 100%;
-                grid-template-rows: 55% 40%;
-                grid-template-areas:
-                    "slider"
-                    "content";
-                place-items: center;
-                gap: 64px;
-                padding: 60px;
-            }
-        
-            .swiper {
-                grid-area: slider;
-            }
-        
-            .content {
-                grid-area: content;
-                text-align: center;
-            }
-        
-            .content h1 {
-                margin-bottom: 20px;
-            }
-        }
-        
-        @media (max-width: 470px) {
-            section {
-                padding: 40px 40px 60px;
-            }
-        
-            .swiper {
-                width: 300px;
-                height: 400px;
-            }
-        }
-    </style>
 </head> 
 
 <body>
@@ -175,108 +38,28 @@
     <!--prodetails-->
 
      <section id="prodetails" class="section-p1">
-        <div  class="all">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img
-                            src="img/product/mo5.jpg" />
-                        <div class="cost">from $230 per group</div>
-                        <div class="overlay">
-                            <h1>Lemonade Medium Size</h1>
-                            <p>
-                                Discover the fascinating beauty of this historic city by
-                                strolling through the rich cultural tapestry that makes Florence
-                                a timeless destination.
-                            </p>
-                            <div class="ratings">
-                                <div class="stars">
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star-half-outline"></ion-icon>
-                                </div>
-                                <span>138 reviews</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="img/product/mo3.jpg" />
-                        <div class="cost">from $380 per group</div>
-                        <div class="overlay">
-                            <h1>Lomade Large  Size</h1>
-                            <p>
-                                Explore the city's majestic castles and fascinating history by
-                                joining our guided tour for an unforgettable journey through
-                                Scotland's capital.
-                            </p>
-                            <div class="ratings">
-                                <div class="stars">
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                </div>
-                                <span>307 reviews</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="img/product/mo4.jpg" />
-                        <div class="cost dark-text">from $99 per adult</div>
-                        <div class="overlay">
-                            <h1>Lemonade Two Medium Size</h1>
-                            <p>
-                                Experience the energy and excitement of New York City from Times
-                                Square's dazzling lights to the serene beauty of Central Park.
-                            </p>
-                            <div class="ratings">
-                                <div class="stars">
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star-half-outline"></ion-icon>
-                                </div>
-                                <span>1152 reviews</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="img/product/mo6.jpg" />
-                        <div class="cost dark-text">from $117 per adult</div>
-                        <div class="overlay">
-                            <h1>Lemonade Small Size</h1>
-                            <p>
-                                Embark on a magical journey through Tokyo by discovering the
-                                beauty of the city as cherry blossom trees paint the streets in
-                                hues of pink.
-                            </p>
-                            <div class="ratings">
-                                <div class="stars">
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star"></ion-icon>
-                                    <ion-icon class="star" name="star-outline"></ion-icon>
-                                </div>
-                                <span>619 reviews</span>
-                            </div>
-                        </div>
-                    </div>
+        <div class="single-pro-image">
+            <img src="img/product/mo2.jpg" width="100%" id="MainImg" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/product/mo2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/product/mo5.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/product/mo3.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/product/mo4.jpg" width="100%" class="small-img" alt="">
                 </div>
             </div>
         </div>
-    
 
         <div id="single-pro-details" class="single-pro-details">
-            <h6>Home / Lemonade</h6>
-            <h4>Lemonade Moris 800 gr</h4>
+            <h6>Home / T-Shirt</h6>
+            <h4>Men's Fashion T Shirt</h4>
             <h2 id="price">$139.00</h2>
             <div class="select" id="option">
                 <p id="tx">Item size <i class='bx bxs-down-arrow'></i></p>
@@ -465,9 +248,7 @@
             
         </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js"></script>
-    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
      <script src="js/script.js"></script>
 </body>
 </html>
